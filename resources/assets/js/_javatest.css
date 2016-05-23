@@ -1,0 +1,13 @@
+.app {
+  background-color: #bada55;
+  height: 100px;
+  border: 2px solid blue;
+  text-align: center;
+  color: black;
+  font-weight: 800;
+}
+
+.bap {
+  background-color: red;
+  height: 35px;
+}

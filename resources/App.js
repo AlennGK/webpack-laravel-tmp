@@ -1,16 +1,13 @@
 import React from 'react';
-import styles from './App.css';
+import ReactDOM from 'react-dom';
+import App from './assets/js/_test.js';
 
-export default class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {test: 'foo'};
-  }
-  render() {
-    return (
-      <div className={styles.app}>
-        bar
-      </div>
-    );
-  }
-}
+ReactDOM.render(<App />, document.getElementById('root'));
+window.alert("app.js is COOL!");
+
+
+require('./app.scss');
+
+
+
+

@@ -5,43 +5,41 @@ var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  devtool: 'eval-source-map',
-  entry: [
-    'webpack-hot-middleware/client?reload=true',
-    path.join(__dirname, 'resources/main.js')
-  ],
-  output: {
-    path: path.join(__dirname, '/public/'),
-    filename: '[name].js',
-    resourcesPath: '/'
-  },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: 'resources/index.tpl.html',
-      inject: 'body',
-      filename: 'index.html'
-    }),
-    new webpack.optimize.OccurenceOrderPlugin(),
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin(),
-    new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify('development')
-    })
-  ],
-  module: {
-    loaders: [{
-      test: /\.js?$/,
-      exclude: /node_modules/,
-      loader: 'babel',
-      query: {
-        "presets": ["react", "es2015", "stage-0", "react-hmre"]
-      }
-    }, {
-      test: /\.json?$/,
-      loader: 'json'
-    }, {
-      test: /\.css$/,
-      loader: 'style!css?modules&localIdentName=[name]---[local]---[hash:base64:5]'
-    }]
-  }
+	devtool: 'eval-source-map',
+	entry: [
+	'webpack-hot-middleware/client?reload=true',
+	path.join(__dirname, 'resources/app.js')
+	],
+	output: {
+		path: path.join(__dirname, '/public/'),
+		filename: '[name].js',
+		resourcesPath: '/'
+	},
+	plugins: [
+	new HtmlWebpackPlugin({
+		template: 'resources/page.html',
+		inject: 'body',
+		filename: 'index.html'
+	}),
+	new webpack.optimize.OccurenceOrderPlugin(),
+	new webpack.HotModuleReplacementPlugin(),
+	new webpack.NoErrorsPlugin(),
+	new webpack.DefinePlugin({
+		'process.env.NODE_ENV': JSON.stringify('development')
+	})
+	],
+	module: {
+		loaders: [{
+			test: /\.js?$/,
+			exclude: /node_modules/,
+			loader: 'babel',
+			query: {
+				"presets": ["react", "es2015", "stage-0", "react-hmre"]
+			}
+		},
+		{ test: /\.json?$/, loader: 'json' },
+		{ test: /\.scss$/, loader: 'style-loader!css-loader!sass-loader' },
+		{ test: /\.css$/, loader: 'style!css?modules&localIdentName=[name]---[local]---[hash:base64:5]'	}
+		]
+	}
 };
