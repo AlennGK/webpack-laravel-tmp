@@ -1,16 +1,21 @@
-#Thanks to christianalfoni
-Please read the following article: [The ultimate Webpack setup](http://www.christianalfoni.com/articles/2015_04_19_The-ultimate-webpack-setup) 
-This repo is mostly copy of that. I'am leaving webpack so I wanted to save my knowledge for later =)
+#Webpack 2 is here!
+Solved css-sass hot reload make me move from gulp to webpack! Finally.
 
 #About
-- Personal template!
-- I am not a js guy yet, just needed to edit some jquery and wanted to dive into it, but naeeeh.
-- So I'am going back to the gulp!
+- Template for my project and simple example for you.
+- Replacement for gulp fast and furious enviroment to code css-sass and later js and maybe vue or react.
+- It is more simple and faster solution. I love the webpack server wich allow me to edit my sass system and see the outcome instantly, with gulp it was realy hard to set all pipes even for css not mentioning js, but if you want to use gulp look bellow.
+- Next step for me will be laravel aplication with laravel MIX wich using webpack too.
 
-#### What I learned is that **gulp** is better for **css** endpoint and **webpack** is more for **js**,  see more here:
-- [Sumarized](https://stackoverflow.com/questions/35062852/npm-vs-bower-vs-browserify-vs-gulp-vs-grunt-vs-webpack)
-- [Guides](https://www.youtube.com/playlist?list=PLioSCPO2vNbCfotvU2OqZqJoGqjZOHJhJ)
-- [Problem with Hot reload & css - separate inline endpoint](https://github.com/webpack/extract-text-webpack-plugin/issues/30#issuecomment-220724110) I did not manage to get it working :(
+[[https://github.com/AlennGK/webpack-tmp/blob/master/schema.png|alt=schema]]
 
+#Thanks to:
+##Webpack:
+Learn from! [matthew hsiung](https://www.youtube.com/watch?v=tBhuTkULIZc&list=PLnUE-7Cz5mHFU_qrXCxZlk0925nCMYKVS)
+Interested in this from [Ihatetomatoes](https://www.youtube.com/watch?v=JdGnYNtuEtE&lc=z12ryz5htkfzhlrfb22jyhmpjse2cpl2t.1486681670606216)
 
+##Gulp 
+[Joel Longie](https://www.youtube.com/playlist?list=PLv1YUP7gO_viROuRcGsDCNM-FUVgMYb_G)
+[Karl Hadwen](https://www.youtube.com/playlist?list=PLpP9FLMkNf54eBRsKoPK7UZl-XvoBu3jA)
+---
 ###Alenn
